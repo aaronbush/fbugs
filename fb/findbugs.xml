@@ -1,0 +1,4 @@
+<FindbugsPlugin>
+	<Detector class="ExtendsChecker" reports="FORBIDDEN_BUG" speed="fast" />
+	<BugPattern abbrev="EXTNDS" type="FORBIDDEN_BUG" category="MT_CORRECTNESS" />
+</FindbugsPlugin>
