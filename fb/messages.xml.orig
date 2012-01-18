@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MesageCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="messagecollection.xsd">
+
+	<Plugin>
+		<ShortDescription>Finds bugs using forbidden classes</ShortDescription>
+		<Details>TBD</Details>
+	</Plugin>
+
+	<Detector class="ExtendsChecker">
+	<Details>
+	<![CDATA[
+	<p>Discovered use of a forbidden class</p>
+	]]>
+	</Details>
+	</Detector>
+
+	<BugPattern type="SOMETHING_HERE">
+		<ShortDescription>Forbidden Class</ShortDescription>
+		<LongDescription>You should not use {1}</LongDescription>
+
+		<Details>tbd</Details>
+	</BugPattern>
+
+	<BugCode abbrev="EXTNDS">extends</BugCode>
+
+</MesageCollection>

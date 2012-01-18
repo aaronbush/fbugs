@@ -1,25 +1,42 @@
-<MesageCollection>
+<?xml version="1.0" encoding="UTF-8"?>
+<MessageCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="messagecollection.xsd">
 
 <Plugin>
-	<ShortDescription>Finds bugs using forbidden classes</ShortDescription>
-	<Details>TBD</Details>
+<ShortDescription>FindBugs Plugin Tutorial Plugin</ShortDescription>
+<Details>Provides detectors as part of the FindBugs detector plugin tutorial.</Details>
 </Plugin>
+
+<Detector class="DetectorTutorial">
+<Details>
+Finds instances of BigDecimals being created with doubles.  </Details>
+</Detector>
 
 <Detector class="ExtendsChecker">
 <Details>
-<![CDATA[
-<p>Discovered use of a forbidden class
-]]>
-</Details>
+Finds instances of forbidden extends.</Details>
 </Detector>
 
-<BugPattern type="SOMETHING_HERE">
-	<ShortDescription>Forbidden Class</ShortDescription>
-	<LongDescription>You should not use {1}</LongDescription>
-
-	<Details>tbd</Details>
+<BugPattern type="TUTORIAL_BUG"> 
+<ShortDescription>BigDecimal created from double</ShortDescription>
+<LongDescription>BigDecimal created from double in {1}</LongDescription>
+<Details>
+<![CDATA[
+<p>Due to the way double-precision floating point values are represented in Java, creating a new BigDecimal from a double is unreliable and may produce surprising results.</p>
+]]>
+</Details>
 </BugPattern>
 
-<BugCode abbrev="EXTNDS">extends</BugCode>
+<BugPattern type="EXTENDS_BUG"> 
+<ShortDescription>Extends forbidden</ShortDescription>
+<LongDescription>Extends forbidden</LongDescription>
+<Details>
+<![CDATA[
+<p>Don't do that</p>
+]]>
+</Details>
+</BugPattern>
 
-</MesageCollection>
+<BugCode abbrev="TU">Tutorial</BugCode>
+<BugCode abbrev="EX">Extends</BugCode>
+</MessageCollection>
