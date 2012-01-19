@@ -4,7 +4,7 @@
         provider="FindBugs Tutorial" 
         website="http://findbugs.sourceforge.net">
 
-        <Detector class="DetectorTutorial" reports="TUTORIAL_BUG" />
+        <!-- <Detector class="DetectorTutorial" reports="TUTORIAL_BUG" /> -->
 		<BugPattern type="TUTORIAL_BUG" abbrev="TU" category="CORRECTNESS"/>
         
 		<Detector class="ExtendsChecker" reports="EXTENDS_BUG" />

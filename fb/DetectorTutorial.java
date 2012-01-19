@@ -14,6 +14,10 @@ public class DetectorTutorial extends OpcodeStackDetector {
 
 	    @Override
 	    public void sawOpcode(int seen) {
+			System.out.println("HUHDA sawOpCode");
+			bugReporter.reportBug(new BugInstance(this, "EXTENDS_BUG", NORMAL_PRIORITY).addClassAndMethod(this).addString("oops").addSourceLine(this));
+
+			/*
 	        if (seen == INVOKESPECIAL && getClassConstantOperand().equals("java/math/BigDecimal")
 		                && getNameConstantOperand().equals("<init>") && getSigConstantOperand().equals("(D)V")) {
 					       OpcodeStack.Item top = stack.getStackItem(0);
@@ -29,5 +33,6 @@ public class DetectorTutorial extends OpcodeStackDetector {
 				}
 			}
 		}
+		*/
 	}
 }

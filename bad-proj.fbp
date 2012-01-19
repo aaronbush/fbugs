@@ -1,5 +1,6 @@
 <Project projectName="test">
   <Jar>/Users/abush/src/java/bad-proj/TestMe.jar</Jar>
+  <SrcDir>/Users/abush/src/java/bad-proj</SrcDir>
   <SuppressionFilter>
     <LastVersion value="-1" relOp="NEQ"/>
   </SuppressionFilter>
